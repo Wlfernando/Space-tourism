@@ -22,6 +22,7 @@
     "baseUrl": "./src/",
     "paths": {
       "@Components/*": ["Components/*"],
+      "@Nav": ["Components/Nav/Nav.tsx"],
     }
   },
   "include": ["src"],

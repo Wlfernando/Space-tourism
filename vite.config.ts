@@ -8,6 +8,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@Components': path.resolve(__dirname, './src/components'),
+      '@Nav': path.resolve(__dirname, './src/Components/Nav/Nav.tsx'),
     }
   }
 })
