@@ -1,0 +1,14 @@
+.button {
+  background-color: transparent;
+  appearance: none;
+  border-color: transparent;
+}
+
+.button_appearance_hamburger {
+  position: relative;
+  z-index: 1;
+  
+  @media screen and (width >= 640px) {
+    display: none;
+  }
+}
