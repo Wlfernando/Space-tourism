@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 0 0 2rem;
+  
+  .header__line {
+    flex: 0 100 30%;
+    position: relative;
+    left: 3rem;
+    z-index: 1;
+    border-color: #ffffff85;
+  }
+
+  @media screen and (width < 1024px) {
+    padding-top: 1rem;
+
+    .header__line {
+      display: none;
+    }
+  }
+
+  @media screen and (width < 640px) {
+    min-height: 4rem;
+    padding-right: 2rem;
+  }
+}
