@@ -5,4 +5,7 @@
   flex-direction: column;
   width: 100%;
   color: white;
+  min-width: 320px;
+  position: relative;
+  contain: strict;
 }
