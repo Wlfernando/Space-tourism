@@ -11,6 +11,7 @@
     align-items: end;
     column-gap: 4%;
     text-transform: uppercase;
+    color: var(--blue-300);
   }
 
   .home__article {
@@ -18,12 +19,19 @@
     gap: 2rem;
   }
 
+  .home__title-complement {
+    font-size: 1.75rem;
+  }
+
   .home__title {
-    font-size: 5rem;
+    font-size: 9rem;
+    color: white;
   }
 
   .home__paragraph {
     text-transform: none;
+    font-size: 1.125rem;
+    line-height: 180%;
   }
 
   .home__circle {
@@ -36,11 +44,12 @@
     aspect-ratio: 1;
     justify-self: end;
     font-size: 2rem;
+    color: #0B0D17;
   }
 
   @media screen and (width < 1024px) {
     .home__container {
-      grid-template: repeat(2, 1fr) / 80%;
+      grid-template: repeat(2, 1fr) / auto;
       place-content: center;
       text-align: center;
       justify-items: center;
@@ -63,7 +72,7 @@
     }
 
     .home__title-complement {
-      font-size: 1rem;
+      line-height: 132%;
     }
 
     .home__title {
