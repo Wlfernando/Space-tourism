@@ -8,4 +8,29 @@
   min-width: 320px;
   position: relative;
   contain: strict;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: center / cover no-repeat;
+    z-index: -1;
+    opacity: .7;
+  }
+
+  &:has(.home)::before {
+    background-image: url('/home/background-home-desktop.jpg');
+  }
+
+  @media screen and (width < 1024px) {
+    &:has(.home)::before {
+      background-image: url('/home/background-home-tablet.jpg');
+    }
+  }
+
+  @media screen and (width < 640px) {
+    &:has(.home)::before {
+      background-image: url('/home/background-home-mobile.jpg');
+    }
+  }
 }
