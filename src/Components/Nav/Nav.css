@@ -21,7 +21,7 @@
 }
 
 .nav_type_navigation {
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(1rem);
   padding: 0 10rem 0 6rem;
   height: 5rem;
 
@@ -58,7 +58,7 @@
     position: absolute;
     right: 0;
     top: 0;
-    padding: 0;
+    padding: 0 0 0 2rem;
     height: 100%;
     width: 70%;
     translate: 100%;
