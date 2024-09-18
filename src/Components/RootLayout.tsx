@@ -6,6 +6,9 @@ export default function RootLayout() {
     <>
       <Header />
       <Outlet />
+      <footer >
+        <p style={{color: 'var(--blue-300)', textAlign: 'center'}}>&copy; 2024. Fernando A. Malfavón</p>
+      </footer>
     </>
   )
 }
