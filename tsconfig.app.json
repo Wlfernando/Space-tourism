@@ -23,6 +23,7 @@
     "paths": {
       "@Components/*": ["Components/*"],
       "@Nav": ["Components/Nav/Nav.tsx"],
+      "@utils/*": ["utils/*"],
     }
   },
   "include": ["src"],
