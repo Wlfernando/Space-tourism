@@ -2,14 +2,7 @@ import Nav from "@Nav"
 import './Header.css'
 import Button from "@Components/Button/Button";
 import { useState } from "react";
-
-const [home, destination, crew, technology] = ['home', 'destination', 'crew', 'technology'];
-const links = [
-  [`/`, home],
-  [`/${destination}`, destination],
-  [`/${crew}`, crew],
-  [`/${technology}`, technology],
-];
+import { linksNav } from "../../utils/routes";
 
 export default function Header() {
   const [active, setActive] = useState<boolean>(false);
@@ -24,7 +17,7 @@ export default function Header() {
         </svg>
         <hr className="header__line" />
         <Button hamburger active={active} onClick={() => setActive(!active)} />
-        <Nav classMod='navigation' active={active} links={links} />
+        <Nav classMod='navigation' active={active} links={linksNav} />
       </header>
     </>
   )
