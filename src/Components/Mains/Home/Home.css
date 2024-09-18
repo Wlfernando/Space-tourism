@@ -1,8 +1,4 @@
 .home {
-  display: grid;
-  place-items: center;
-  flex-grow: 1;
-
   .home__container {
     width: 80%;
     height: 75%;

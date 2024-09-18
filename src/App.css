@@ -1,14 +1,19 @@
 #root {
   font-family: "Bellefair";
-  max-width: 1280px;
+  width: clamp(320px, 100%, 1280px);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   color: white;
-  min-width: 320px;
   position: relative;
   contain: layout;
   isolation: isolate;
+
+  main {
+    display: grid;
+    place-items: center;
+    flex-grow: 1;
+  }
 
   &::before {
     content: '';
