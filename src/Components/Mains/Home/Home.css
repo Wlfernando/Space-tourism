@@ -1,18 +1,14 @@
 .home {
-  .home__container {
-    width: 80%;
-    height: 75%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: end;
-    column-gap: 4%;
-    text-transform: uppercase;
-    color: var(--blue-300);
-  }
+  margin: 5% 10%;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: end;
+  column-gap: 4%;
+  text-transform: uppercase;
+  color: var(--blue-300);
 
   .home__article {
     display: grid;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
   .home__title-complement {
@@ -44,13 +40,12 @@
   }
 
   @media screen and (width < 1024px) {
-    .home__container {
-      grid-template: repeat(2, 1fr) / auto;
-      place-content: center;
-      text-align: center;
-      justify-items: center;
-      row-gap: 1rem;
-    }
+    grid-template: repeat(2, auto) / auto;
+    place-content: center;
+    text-align: center;
+    justify-items: center;
+    row-gap: 1rem;
+    place-content: stretch;
 
     .home__article {
       align-self: stretch;
@@ -62,10 +57,7 @@
   }
 
   @media screen and (width < 640px) {
-    .home__container {
-      height: 90%;
-      grid-template-columns: 100%;
-    }
+    margin: 7% 5%;
 
     .home__title-complement {
       line-height: 132%;
