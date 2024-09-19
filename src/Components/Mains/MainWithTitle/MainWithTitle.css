@@ -1,0 +1,14 @@
+.main {
+  .main__title {
+    grid-column: span 2;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    font-family: "Barlow Condensed";
+    font-weight: 400;
+    letter-spacing: 4px;
+  }
+
+  .main__before-title {
+    opacity: .5;
+  }
+}
