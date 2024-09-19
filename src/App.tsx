@@ -1,10 +1,10 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
 import './App.css'
 import RootLayout from '@Components/RootLayout'
 import Home from '@Components/Mains/Home/Home'
-import { pathDestination } from './utils/routes'
+import { destination, place } from './utils/routes'
 import Destination from '@Components/Mains/Destination/Destination'
-import { loadDestination } from './Loader/Loader'
+import { LoadPlace, loadDestination } from './Loader/Loader'
 
 const router = createBrowserRouter([{
   path: '/',
@@ -13,9 +13,15 @@ const router = createBrowserRouter([{
     index: true,
     element: <Home />
   },{
-    path: pathDestination,
-    element: <Destination />,
+    path: destination,
+    element: <Outlet />,
     loader: loadDestination,
+    children: [{
+      loader: LoadPlace,
+      path: place,
+      element: <Destination />,
+    }]
+    
   }]
 }])
 

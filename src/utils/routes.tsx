@@ -1,13 +1,18 @@
-const [home, destination, crew, technology] = ['home', 'destination', 'crew', 'technology'];
+export const [home, destination, crew, technology] = ['home', 'destination', 'crew', 'technology'];
 
 export const linksNav = [
   [`/`, home],
-  [`/${destination}/moon`, destination],
+  [`/${destination}`, destination],
   [`/${crew}`, crew],
   [`/${technology}`, technology],
 ];
 
-export const [pathDestination] = [`${destination}/:place`]
+export const [place] = [`:place`]
 
-export const linksDestination = ['moon', 'mars', 'europa', 'titan']
+const destinationNames = ['moon', 'mars', 'europa', 'titan'];
+const [moon] = destinationNames;
+
+export const [pathPlace] = [`/${destination}/${moon}`];
+
+export const linksDestination = destinationNames
   .map(d => [`/${destination}/${d}`, d]);
