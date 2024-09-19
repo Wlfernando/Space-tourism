@@ -91,3 +91,25 @@
     }
   }
 }
+
+.nav_type_destination {
+  font-size: 1rem;
+
+  .nav__list {
+    gap: 1.75rem;
+  }
+
+  .nav__item {
+    height: 2rem;
+    opacity: .7;
+
+    &:has(.active) {
+      opacity: 1;
+      border-bottom: 2px solid white;
+    }
+  }
+
+  @media screen and (width < 1024px) {
+    justify-content: center;
+  }
+}
