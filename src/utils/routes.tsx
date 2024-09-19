@@ -7,7 +7,7 @@ export const linksNav = [
   [`/${technology}`, technology],
 ];
 
-export const [place] = [`:place`]
+export const [place] = [`${destination}/:place?`]
 
 const destinationNames = ['moon', 'mars', 'europa', 'titan'];
 const [moon] = destinationNames;
