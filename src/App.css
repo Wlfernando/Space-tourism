@@ -11,7 +11,6 @@
 
   main {
     display: grid;
-    place-items: center;
     flex-grow: 1;
   }
 
@@ -28,15 +27,27 @@
     background-image: url('/home/background-home-desktop.jpg');
   }
 
+  &:has(.destination)::before {
+    background-image: url('/destination/background-destination-desktop.jpg');
+  }
+
   @media screen and (width < 1024px) {
     &:has(.home)::before {
       background-image: url('/home/background-home-tablet.jpg');
+    }
+
+    &:has(.destination)::before {
+      background-image: url('/destination/background-destination-tablet.jpg');
     }
   }
 
   @media screen and (width < 640px) {
     &:has(.home)::before {
       background-image: url('/home/background-home-mobile.jpg');
+    }
+
+    &:has(.destination)::before {
+      background-image: url('/destination/background-destination-mobile.jpg');
     }
   }
 }
