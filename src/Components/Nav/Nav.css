@@ -113,3 +113,22 @@
     justify-content: center;
   }
 }
+
+.nav_type_crew {
+  .nav__list {
+    gap: 2.5rem;
+  }
+
+  .nav__anchor {
+    background-color: white;
+    border-radius: 50px;
+    width: .75rem;
+    aspect-ratio: 1;
+    opacity: .5;
+    font-size: .5rem;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+}
