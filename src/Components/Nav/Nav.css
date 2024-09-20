@@ -55,6 +55,7 @@
   }
 
   @media screen and (width < 640px) {
+    z-index: 1;
     position: absolute;
     right: 0;
     top: 0;
