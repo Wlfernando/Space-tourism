@@ -31,6 +31,10 @@
     background-image: url('/destination/background-destination-desktop.jpg');
   }
 
+  &:has(.crew)::before {
+    background-image: url('/crew/background-crew-desktop.jpg');
+  }
+
   @media screen and (width < 1024px) {
     &:has(.home)::before {
       background-image: url('/home/background-home-tablet.jpg');
@@ -38,6 +42,10 @@
 
     &:has(.destination)::before {
       background-image: url('/destination/background-destination-tablet.jpg');
+    }
+
+    &:has(.crew)::before {
+      background-image: url('/crew/background-crew-tablet.jpg');
     }
   }
 
@@ -48,6 +56,10 @@
 
     &:has(.destination)::before {
       background-image: url('/destination/background-destination-mobile.jpg');
+    }
+
+    &:has(.crew)::before {
+      background-image: url('/crew/background-crew-mobile.jpg');
     }
   }
 }
