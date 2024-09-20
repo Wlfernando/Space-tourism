@@ -1,4 +1,4 @@
-import type { PseudoREST } from './const'
+import { pseudoREST, type PseudoREST } from './const'
 
 function normalizeImageSrc(url: string): string {
   return url.replace('./assets', '')
@@ -49,4 +49,12 @@ export function capitalize(string: string) {
 
 export function readName(string: string) {
   return string.split('-').map(capitalize).join(' ')
+}
+
+export function readTech(string: string) {
+  return capitalize(string).replace('-', ' ')
+}
+
+export function get(path: keyof PseudoREST, itemName: string) {
+  return pseudoREST[path].find(({ name }) => name === itemName)
 }
