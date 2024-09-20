@@ -1,0 +1,84 @@
+.crew {
+  grid-template: max-content 1fr 2fr / repeat(2, 1fr);
+
+  .crew__text {
+    grid-row: 3;
+    display: grid;
+    align-content: space-between;
+  }
+
+  .crew__role {
+    font-size: 2rem;
+    opacity: .5;
+  }
+
+  .crew__name {
+    font-size: 3.5rem;
+    font-weight: 400;
+  }
+
+  .crew__role, .crew__name {
+    text-transform: uppercase;
+    font-family: "Bellefair";
+  }
+
+  .crew__bio {
+    font-size: 1.125rem;
+    line-height: 180%;
+    color: #ffffffb3;
+  }
+
+  .crew__pic {
+    grid-row: span 2;
+    height: 36rem;
+    place-self: end center;
+    
+    > img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      mask-image: linear-gradient(black 80%, transparent);
+      object-position: center bottom;
+    }
+  }
+
+  @media screen and (width < 1024px) {
+    grid-template: auto / auto;
+
+    .crew__text {
+      grid-row: 2;
+      gap: 3rem;
+      justify-items: center;
+      text-align: center;
+    }
+
+    .crew__info {
+      display: grid;
+      justify-items: center;
+      gap: 1.5rem;
+    }
+
+    .crew__pic {
+      grid-row: unset;
+      height: max-content;
+    }
+  }
+
+  @media screen and (width < 640px) {
+    .crew__role {
+      font-size: 1.125rem;
+    }
+
+    .crew__name {
+      font-size: 1.5rem;
+    }
+
+    .crew__bio {
+      font-size: .9rem;
+    }
+
+    .crew__pic {
+      width: 70%;
+    }
+  }
+}
