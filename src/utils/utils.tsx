@@ -46,3 +46,7 @@ export default function clone(item: any) {
 export function capitalize(string: string) {
   return string[0].toUpperCase() + string.slice(1)
 }
+
+export function readName(string: string) {
+  return string.split('-').map(capitalize).join(' ')
+}
