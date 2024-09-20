@@ -7,7 +7,7 @@ export const linksNav = [
   [`/${technology}`, technology],
 ];
 
-export const [place, squad] = [`${destination}/:place?`, `${crew}/:squad?`]
+export const [place, squad, tech] = [`${destination}/:place?`, `${crew}/:squad?`, `${technology}/:tech?`]
 
 const destinationNames = ['moon', 'mars', 'europa', 'titan'];
 const [moon] = destinationNames;
@@ -15,10 +15,16 @@ const [moon] = destinationNames;
 const crewMembers = ['douglas-hurley', 'mark-shuttleworth', 'victor-glover', 'anousheh-ansari']
 const [douglas] = crewMembers
 
-export const [pathPlace, pathSquad] = [`/${destination}/${moon}`, `/${crew}/${douglas}`];
+const techEndpoints = ['launch-vehicle', 'spaceport', 'space-capsule']
+const [launch] = techEndpoints
+
+export const [pathPlace, pathSquad, pathLauch] = [`/${destination}/${moon}`, `/${crew}/${douglas}`, `/${technology}/${launch}`];
 
 export const linksCrew = crewMembers
   .map(c => [`/${crew}/${c}`, ''])
 
 export const linksDestination = destinationNames
   .map(d => [`/${destination}/${d}`, d]);
+
+export const linksTech = techEndpoints
+  .map((t, i) => [`/${technology}/${t}`, String(i + 1)])
