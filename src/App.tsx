@@ -2,9 +2,10 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
 import RootLayout from '@Components/RootLayout'
 import Home from '@Components/Mains/Home/Home'
-import { place } from './utils/routes'
+import { place, squad } from './utils/routes'
 import Destination from '@Components/Mains/Destination/Destination'
-import { LoadPlace } from './Loader/Loader'
+import { loadPlace, loadSquad } from './Loader/Loader'
+import Crew from '@Components/Mains/Crew/Crew'
 
 const router = createBrowserRouter([{
   path: '/',
@@ -14,8 +15,12 @@ const router = createBrowserRouter([{
     element: <Home />
   },{
     path: place,
-    loader: LoadPlace,
+    loader: loadPlace,
     element: <Destination />,
+  },{
+    path: squad,
+    loader: loadSquad,
+    element: <Crew />
   }]
 }])
 
