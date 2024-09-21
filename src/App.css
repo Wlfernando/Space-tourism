@@ -35,6 +35,10 @@
     background-image: url('/crew/background-crew-desktop.jpg');
   }
 
+  &:has(.tech)::before {
+    background-image: url('/technology/background-technology-desktop.jpg');
+  }
+
   @media screen and (width < 1024px) {
     &:has(.home)::before {
       background-image: url('/home/background-home-tablet.jpg');
@@ -46,6 +50,10 @@
 
     &:has(.crew)::before {
       background-image: url('/crew/background-crew-tablet.jpg');
+    }
+
+    &:has(.tech)::before {
+      background-image: url('/technology/background-technology-tablet.jpg');
     }
   }
 
@@ -60,6 +68,10 @@
 
     &:has(.crew)::before {
       background-image: url('/crew/background-crew-mobile.jpg');
+    }
+
+    &:has(.tech)::before {
+      background-image: url('/technology/background-technology-mobile.jpg');
     }
   }
 }
