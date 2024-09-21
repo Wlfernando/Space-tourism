@@ -26,7 +26,7 @@ export default function Crew() {
         </div>
         <picture className="crew__pic">
           <source srcSet={images.webp} />
-          <img src={images.png} alt="crew member" />
+          <img src={images.png} alt={name} />
         </picture>
       </MainWithTitle>
     </>
