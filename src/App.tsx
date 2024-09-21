@@ -2,10 +2,11 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
 import RootLayout from '@Components/RootLayout'
 import Home from '@Components/Mains/Home/Home'
-import { place, squad } from './utils/routes'
+import { place, squad, tech } from './utils/routes'
 import Destination from '@Components/Mains/Destination/Destination'
-import { loadPlace, loadSquad } from './Loader/Loader'
+import { loadPlace, loadSquad, loadTech } from './Loader/Loader'
 import Crew from '@Components/Mains/Crew/Crew'
+import Technology from '@Components/Mains/Technology/Technology'
 
 const router = createBrowserRouter([{
   path: '/',
@@ -21,6 +22,10 @@ const router = createBrowserRouter([{
     path: squad,
     loader: loadSquad,
     element: <Crew />
+  },{
+    path: tech,
+    loader: loadTech,
+    element: <Technology />
   }]
 }])
 
