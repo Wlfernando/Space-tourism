@@ -1,0 +1,73 @@
+.tech {
+  grid-template-columns: auto calc(30.1875rem + 1.25rem) 1fr;
+  padding-right: 0;
+  align-items: center;
+  gap: 2rem;
+
+  .tech__article {
+    display: grid;
+    gap: 1rem;
+    margin-left: 1.25rem;
+  }
+
+  .tech__terminology {
+    opacity: .5;
+    font-size: 2rem;
+  }
+
+  .tech__name {
+    font-size: 3.5rem;
+  }
+
+  .tech__terminology, .tech__name {
+    font-family: "Bellefair";
+    text-transform: uppercase;
+  }
+
+  .tech__description {
+    line-height: 180%;
+    color: var(--blue-300);
+  }
+
+  .tech__pic, .tech__img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .tech__img {
+    object-fit: contain;
+  }
+
+  @media screen and (width < 1024px) {
+    grid-template-columns: auto;
+    padding-inline: 0;
+
+    .tech__pic {
+      grid-row: 2;
+    }
+
+    .tech__img {
+      object-fit: cover;
+    }
+
+    .tech__article {
+      margin-left: 0;
+      text-align: center;
+      width: 36rem;
+    }
+  }
+
+  @media screen and ( width < 640px) {
+    .tech__article {
+      width: 90%;
+    }
+
+    .tech__terminology {
+      font-size: 1.125rem;
+    }
+
+    .tech__name {
+      font-size: 2rem;
+    }
+  }
+}
