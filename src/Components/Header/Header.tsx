@@ -7,10 +7,16 @@ import { useLocation } from "react-router-dom";
 
 export default function Header() {
   const [active, setActive] = useState<boolean>(false);
-  const { key } = useLocation();
+  const { key, pathname } = useLocation();
+  const [path, setPath] = useState('');
 
   useEffect(() => {
-    setActive(false)
+    const nav = pathname.split('/')[1];
+
+    if (path !== nav) {
+      setPath(nav);
+      setTimeout(setActive, 200, false);
+    }
   }, [key])
 
   return (
