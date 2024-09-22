@@ -1,11 +1,17 @@
 import Nav from "@Nav"
 import './Header.css'
 import Button from "@Components/Button/Button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { linksNav } from "../../utils/routes";
+import { useLocation } from "react-router-dom";
 
 export default function Header() {
   const [active, setActive] = useState<boolean>(false);
+  const { key } = useLocation();
+
+  useEffect(() => {
+    setActive(false)
+  }, [key])
 
   return (
     <>
