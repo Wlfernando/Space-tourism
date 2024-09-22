@@ -27,14 +27,6 @@
     }
   }
 
-  @media screen and (width < 1024px) and (width >= 640px) {
-    &.tech {
-      .main__title {
-        margin-left: 2.5rem;
-      }
-    }
-  }
-
   @media screen and (width < 640px) {
     padding: 7% 5%;
 
