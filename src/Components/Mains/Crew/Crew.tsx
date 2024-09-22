@@ -4,6 +4,7 @@ import { Member } from "@utils/const";
 import Nav from "@Nav";
 import { linksCrew } from "@utils/routes";
 import './Crew.css'
+import Article from "@Components/Article/Article";
 
 export default function Crew() {
   const { member: {
@@ -17,11 +18,7 @@ export default function Crew() {
     <>
       <MainWithTitle className="crew" before="02" title="meet your crew" >
         <div className="crew__text" >
-          <article className="crew__info" >
-            <p className="crew__role" >{role}</p>
-            <h2 className="crew__name" >{name}</h2>
-            <p className="crew__bio" >{bio}</p>
-          </article>
+          <Article title={name} subTitle={role} description={bio} />
           <Nav links={linksCrew} classMod="crew" />
         </div>
         <picture className="crew__pic">

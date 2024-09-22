@@ -4,6 +4,7 @@ import Nav from "@Nav";
 import { linksDestination } from "@utils/routes";
 import { Place } from "@utils/const";
 import MainWithTitle from "../MainWithTitle/MainWithTitle";
+import Article from "@Components/Article/Article";
 
 export default function Destination() {
   const { destination: {
@@ -23,9 +24,7 @@ export default function Destination() {
         </picture>
         <div className="destination__text">
           <Nav links={linksDestination} classMod="destination" />
-          <article className="destination__info">
-            <h2 className="destination__name">{name}</h2>
-            <p className="destination__description">{description}</p>
+          <Article title={name} description={description} >
             <hr className="destination__line" />
             <div className="destination__length">
               <p>avg. distance</p>
@@ -35,7 +34,7 @@ export default function Destination() {
               <p>est. travel time</p>
               <p>{travel}</p>
             </div>
-          </article>
+          </Article>
         </div>
       </MainWithTitle>
     </>

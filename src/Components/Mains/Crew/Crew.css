@@ -7,27 +7,6 @@
     align-content: space-between;
   }
 
-  .crew__role {
-    font-size: 2rem;
-    opacity: .5;
-  }
-
-  .crew__name {
-    font-size: 3.5rem;
-    font-weight: 400;
-  }
-
-  .crew__role, .crew__name {
-    text-transform: uppercase;
-    font-family: "Bellefair";
-  }
-
-  .crew__bio {
-    font-size: 1.125rem;
-    line-height: 180%;
-    color: #ffffffb3;
-  }
-
   .crew__pic {
     grid-row: span 2;
     height: 36rem;
@@ -52,12 +31,6 @@
       text-align: center;
     }
 
-    .crew__info {
-      display: grid;
-      justify-items: center;
-      gap: 1.5rem;
-    }
-
     .crew__pic {
       grid-row: unset;
       height: max-content;
@@ -65,18 +38,6 @@
   }
 
   @media screen and (width < 640px) {
-    .crew__role {
-      font-size: 1.125rem;
-    }
-
-    .crew__name {
-      font-size: 1.5rem;
-    }
-
-    .crew__bio {
-      font-size: .9rem;
-    }
-
     .crew__pic {
       width: 70%;
     }

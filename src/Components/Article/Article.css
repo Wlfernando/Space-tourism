@@ -1,0 +1,62 @@
+.article {
+  display: grid;
+
+  .article__sub-title {
+    font-size: 2rem;
+    opacity: .5;
+  }
+
+  .article__title {
+    font-size: 3.5rem;
+    font-weight: 400;
+  }
+
+  .article__only-title {
+    font-size: 6.25rem;
+    font-weight: 400;
+  }
+
+  .article__sub-title, .article__title, .article__only-title {
+    text-transform: uppercase;
+    font-family: "bellefair";
+    grid-column: 1 / -1;
+  }
+
+  .article__description {
+    font-size: 1.125rem;
+    line-height: 180%;
+    color: var(--blue-300);
+    grid-column: 1 / -1;
+  }
+
+  @media screen and (width < 1024px) {
+    justify-items: center;
+    gap: 1.5rem;
+  }
+
+  @media screen and (width < 640px) {
+    .article__sub-title {
+      font-size: 1.125rem;
+    }
+
+    .article__title {
+      font-size: 1.5rem;
+    }
+
+    .article__only-title {
+      font-size: 3.5rem;
+    }
+
+    .article__description {
+      font-size: .9rem;
+    }
+  }
+}
+
+.article_children {
+  grid-template-columns: repeat(2, 1fr);
+
+  @media screen and (width < 640px) {
+    grid-template-columns: auto;
+  }
+}

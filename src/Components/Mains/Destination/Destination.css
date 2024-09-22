@@ -13,43 +13,21 @@
     margin: 0 2rem;
   }
 
-  .destination__info {
-    display: grid;
-    gap: 1.5rem;
-
-    & > :not(.destination__length) {
-      grid-column: span 2;
-    }
-  }
-
-  .destination__name {
-    font-size: 6.25rem;
-    font-weight: 400;
-    font-family: "Bellefair";
-    text-transform: uppercase;
-  }
-
-  .destination__description {
-    line-height: 180%;
-    font-size: 1.125rem;
-    color: var(--blue-300);
-    opacity: .7;
-  }
-
   .destination__line {
     opacity: .3;
     width: 100%;
     margin-block: 1rem;
+    grid-column: 1 / -1;
   }
 
   .destination__length {
     display: grid;
     gap: .25rem;
+    text-transform: uppercase;
 
     > :first-child {
       font-size: .875rem;
       color: var(--blue-300);
-      text-transform: uppercase;
     }
 
     > :last-child {
@@ -73,25 +51,6 @@
 
     .destination__length {
       justify-items: center;
-    }
-  }
-
-  @media screen and (width < 640px) {
-    .destination__info {
-      grid-template-columns: 1fr;
-
-      & > :not(.destination__length) {
-        grid-column: unset;
-      }
-    }
-
-    .destination__name {
-      font-size: 3.5rem;
-    }
-
-    .destination__description {
-      font-size: .9rem;
-      line-height: 180%;
     }
   }
 }
