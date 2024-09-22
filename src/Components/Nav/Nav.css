@@ -11,6 +11,7 @@
   .nav__item {
     display: grid;
     place-items: center;
+    transition: border-color 200ms ease-in-out;
   }
 
   .nav__anchor {
@@ -32,7 +33,7 @@
   }
 
   .nav__item:has(.active) {
-    border-bottom: 2px solid white;
+    border-color:white;
   }
 
   .nav__anchor {
@@ -51,6 +52,12 @@
   @media screen and (width < 1024px) and (width >= 640px) {
     .nav__anchor::before {
       content: '';
+    }
+  }
+
+  @media screen and (width >= 640px) {
+    .nav__item {
+      border-bottom: 2px solid transparent;
     }
   }
 
@@ -78,10 +85,10 @@
 
     .nav__item {
       place-items: start;
+      border-right: 2px solid transparent;
 
       &:has(.active) {
-        border-bottom: none;
-        border-right: 2px solid white;
+        border-color: white;
       }
     }
 
@@ -103,10 +110,11 @@
   .nav__item {
     height: 2rem;
     opacity: .7;
+    border-bottom: 2px solid transparent;
 
     &:has(.active) {
       opacity: 1;
-      border-bottom: 2px solid white;
+      border-color: white;
     }
   }
 
@@ -127,6 +135,7 @@
     aspect-ratio: 1;
     opacity: .5;
     font-size: .5rem;
+    transition: opacity 200ms ease-in-out;
 
     &.active {
       opacity: 1;
