@@ -1,0 +1,44 @@
+.nav_type_tech {
+  .nav__list {
+    flex-direction: column;
+    gap: 3.3125rem;
+  }
+
+  .nav__anchor {
+    background-color: transparent;
+    border-radius: 50%;
+    width: 5rem;
+    aspect-ratio: 1;
+    display: grid;
+    place-content: center;
+    font-size: 2rem;
+    border: 1px solid white;
+    transition: 
+      color 150ms ease-in-out,
+      background-color 150ms ease-in-out;
+
+    &.active {
+      color: var(--blue-900);
+      background-color: white;
+    }
+  }
+
+  @media screen and (width < 1024px) {
+    .nav__list {
+      flex-direction: row;
+      gap: 1rem;
+    }
+
+    .nav__anchor {
+      width: 3.5rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  @media screen and (width < 640px) {
+    .nav__anchor {
+      width: 2.5rem;
+      font-size: 1.125rem;
+    }
+  }
+}

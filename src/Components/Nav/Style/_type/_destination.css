@@ -1,0 +1,42 @@
+.nav_type_destination {
+  font-size: 1rem;
+
+  .nav__list {
+    gap: 1.75rem;
+  }
+
+  .nav__item {
+    height: 2rem;
+    opacity: .7;
+    border-bottom: 2px solid transparent;
+
+    &:has(.active) {
+      opacity: 1;
+      border-color: white;
+    }
+  }
+
+  @media screen and (width < 1024px) {
+    justify-content: center;
+  }
+}
+
+.nav_type_crew {
+  .nav__list {
+    gap: 2.5rem;
+  }
+
+  .nav__anchor {
+    background-color: white;
+    border-radius: 50px;
+    width: .75rem;
+    aspect-ratio: 1;
+    opacity: .5;
+    font-size: .5rem;
+    transition: opacity 200ms ease-in-out;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+}
