@@ -1,6 +1,5 @@
 import { useNavigate } from 'react-router-dom'
 import './Home.css'
-import { destination } from '@utils/routes'
 import { randomDestination } from '@utils/utils';
 
 export default function Home() {
@@ -19,12 +18,14 @@ export default function Home() {
         </article>
         <a
           className='home__circle'
-          href={`/${destination}`}
+          href={`/random`}
           onClick={({ currentTarget, nativeEvent }) => {
-            const unkownDestination = randomDestination();
             nativeEvent.preventDefault();
             currentTarget.classList.add('home__circle_animate');
-            currentTarget.addEventListener('animationend',() => {navigate(unkownDestination)}, { once: true });
+          }}
+          onAnimationEnd={() => {
+            const unkownDestination = randomDestination();
+            navigate(unkownDestination)
           }}
         >
           explore
