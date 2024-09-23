@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
-import RootLayout from '@Components/RootLayout'
+import RootLayout from '@Components/RootLayout.tsx'
 import Home from '@Components/Mains/Home/Home'
 import { place, squad, tech } from './utils/routes'
 import Destination from '@Components/Mains/Destination/Destination'
