@@ -9,7 +9,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@Components': resolve('./src/components'),
+      '@Components': resolve('./src/Components'),
       '@Nav': resolve('./src/Components/Nav/Nav.tsx'),
       '@utils': resolve('./src/utils'),
     }
