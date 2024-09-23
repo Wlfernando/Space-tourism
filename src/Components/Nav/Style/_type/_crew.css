@@ -1,0 +1,22 @@
+.nav_type_crew {
+  .nav__list {
+    gap: 2.5rem;
+  }
+
+  .nav__anchor {
+    background-color: white;
+    border-radius: 50px;
+    width: .75rem;
+    aspect-ratio: 1;
+    opacity: .5;
+    font-size: .5rem;
+    transition: 
+      opacity 200ms ease-in-out,
+      scale 200ms ease-in-out;
+
+    &.active {
+      opacity: 1;
+      scale: 1.5;
+    }
+  }
+}
