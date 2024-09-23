@@ -21,7 +21,7 @@ export default function Home() {
           href={`/random`}
           onClick={({ currentTarget, nativeEvent }) => {
             nativeEvent.preventDefault();
-            currentTarget.classList.add('home__circle_animate');
+            currentTarget.classList.add('home__circle_transite');
           }}
           onAnimationEnd={() => {
             const unkownDestination = randomDestination();
