@@ -1,6 +1,11 @@
+import { useNavigate } from 'react-router-dom'
 import './Home.css'
+import { destination } from '@utils/routes'
+import { randomDestination } from '@utils/utils';
 
 export default function Home() {
+  const navigate = useNavigate();
+
   return (
     <>
       <main className='home' >
@@ -12,9 +17,18 @@ export default function Home() {
             Well sit back, and relax because we’ll give you a truly out of this world experience!
           </p>
         </article>
-        <div className='home__circle'>
-          <p>explore</p>
-        </div>
+        <a
+          className='home__circle'
+          href={`/${destination}`}
+          onClick={({ currentTarget, nativeEvent }) => {
+            const unkownDestination = randomDestination();
+            nativeEvent.preventDefault();
+            currentTarget.classList.add('home__circle_animate');
+            currentTarget.addEventListener('animationend',() => {navigate(unkownDestination)}, { once: true });
+          }}
+        >
+          explore
+        </a>
       </main>
     </>
   )

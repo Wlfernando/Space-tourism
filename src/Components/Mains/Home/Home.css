@@ -37,6 +37,13 @@
     justify-self: end;
     font-size: 2rem;
     color: #0B0D17;
+    text-decoration: none;
+    box-shadow: 0 0 0 0 white;
+    animation: pulse 1s ease paused;
+  }
+
+  .home__circle_animate {
+    animation-play-state: running;
   }
 
   @media screen and (width < 1024px) {
@@ -73,5 +80,11 @@
       font-size: 1rem;
       align-self: center;
     }
+  }
+}
+
+@keyframes pulse {
+to {
+    box-shadow: 0 0 0 75px transparent;
   }
 }

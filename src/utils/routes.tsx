@@ -9,7 +9,7 @@ export const linksNav = [
 
 export const [place, squad, tech] = [`${destination}/:place?`, `${crew}/:squad?`, `${technology}/:tech?`]
 
-const destinationNames = ['moon', 'mars', 'europa', 'titan'];
+export const destinationNames = ['moon', 'mars', 'europa', 'titan'];
 const [moon] = destinationNames;
 
 const crewMembers = ['douglas-hurley', 'mark-shuttleworth', 'victor-glover', 'anousheh-ansari']

@@ -1,4 +1,5 @@
 import { pseudoREST, type PseudoREST } from './const'
+import { destination, destinationNames } from './routes';
 
 function normalizeImageSrc(url: string): string {
   return url.replace('./assets', '')
@@ -57,4 +58,9 @@ export function readTech(string: string) {
 
 export function get(path: keyof PseudoREST, itemName: string) {
   return pseudoREST[path].find(({ name }) => name === itemName)
+}
+
+export function randomDestination() {
+  const randomDestination = Math.floor(Math.random() * 4)
+  return `/${destination}/${destinationNames[randomDestination]}`
 }
