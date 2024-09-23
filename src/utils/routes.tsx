@@ -1,4 +1,5 @@
-export const [home, destination, crew, technology] = ['home', 'destination', 'crew', 'technology'];
+export const baseRoutes = ['home', 'destination', 'crew', 'technology'];
+export const [home, destination, crew, technology] = baseRoutes;
 
 export const linksNav = [
   [`/`, home],
@@ -28,3 +29,5 @@ export const linksDestination = destinationNames
 
 export const linksTech = techEndpoints
   .map((t, i) => [`/${technology}/${t}`, String(i + 1)])
+
+export const paths = [destinationNames, crewMembers, techEndpoints]

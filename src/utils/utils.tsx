@@ -1,5 +1,5 @@
 import { pseudoREST, type PseudoREST } from './const'
-import { destination, destinationNames } from './routes';
+import { baseRoutes, paths } from './routes';
 
 function normalizeImageSrc(url: string): string {
   return url.replace('./assets', '')
@@ -61,6 +61,9 @@ export function get(path: keyof PseudoREST, itemName: string) {
 }
 
 export function randomDestination() {
-  const randomDestination = Math.floor(Math.random() * 4)
-  return `/${destination}/${destinationNames[randomDestination]}`
+  const randomize = (seed: number) => Math.floor(Math.random() * seed);
+  const randomHead = randomize(3);
+  const randomTail = randomize(randomHead < 2 ? 4 : 3)
+
+  return `/${baseRoutes.slice(1)[randomHead]}/${paths[randomHead][randomTail]}`
 }
