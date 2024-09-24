@@ -15,7 +15,7 @@ export default function Header() {
 
     if (path !== nav) {
       setPath(nav);
-      setTimeout(setActive, 200, false);
+      active && setTimeout(setActive, 200, false);
     }
   }, [key])
 
