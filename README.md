@@ -1,50 +1,18 @@
-# React + TypeScript + Vite
+# Frontend Mentor - Space tourism
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+It's a multipage website space tourism theme builded with react router v6, the display change a little depending of the device; the menu in desktop is a bar in the header, meanwhile in phone, is a sidebar accessed by clicking the hamburger button. Each path has their own routes: destination are names, crew are the dots and thecnology are numbers.
 
-Currently, two official plugins are available:
+In the home the user can visualize a big beating explore button, when clicked and after finish the animation triggered by pressing it, drives randomly within the site. The all data is located at utils/data.json provided by a collaboration by frontend mentor and Kevin Powell for this challenge. The various HOC allowed write less code and styles. The project aimed to reuse more the components like the navigation component adding a modifier to adapt the needs of each case.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of content
 
-## Expanding the ESLint configuration
+- Overview
+  - The challenge
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Overview
 
-- Configure the top-level `parserOptions` property like this:
+### The challenge
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- View each page and be able to toggle between the tabs to see new information
+- View the optimal layout for each of the website's pages depending on their device's screen size
+- See hover states for all interactive elements on the page
